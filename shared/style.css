@@ -1,0 +1,31 @@
+/* Shared look for Game of the Week: dark, phone first. Games add their own styles on top. */
+:root {
+  --bg: #0b0f11;
+  --bg-2: #111719;
+  --panel: #1a1f22;
+  --panel-2: #23292c;
+  --line: rgba(255,255,255,.08);
+  --text: #f2f5f6;
+  --dim: #9aa6ab;
+  --faint: #66727780;
+  --green: #2fbf71;
+  --green-2: #1d8f53;
+  --gold: #e8b64c;
+  --red: #ef4b4b;
+  --radius: 16px;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, sans-serif;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg); color: var(--text); font-family: var(--font);
+  -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none; -webkit-user-select: none; user-select: none;
+}
+button { font: inherit; color: inherit; border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+button:active { transform: scale(.97); }
+img { -webkit-user-drag: none; }
+.money { font-variant-numeric: tabular-nums; }
