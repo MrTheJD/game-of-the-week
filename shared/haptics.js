@@ -35,7 +35,8 @@ export function hapticButton(target, onTap) {
   label.style.cssText = "position:absolute;inset:0;z-index:5;cursor:pointer;-webkit-tap-highlight-color:transparent";
   const input = document.createElement("input");
   input.type = "checkbox"; input.setAttribute("switch", ""); input.tabIndex = -1;
-  input.style.cssText = "position:absolute;opacity:0;pointer-events:none;width:1px;height:1px";
+  // fixed, so focusing it never scrolls the page or a container to "show" it
+  input.style.cssText = "position:fixed;left:0;top:0;opacity:0;pointer-events:none;width:1px;height:1px";
   input.addEventListener("click", e => e.stopPropagation());
   label.appendChild(input);
   label.addEventListener("click", e => {
